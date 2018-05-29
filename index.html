@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+	<link rel="stylesheet" type="text/css" href="introduction/style.css">
+	<title>One Day In NYUSH // Introduction</title>
+
+</head>
+
+
+<body>
+	<div id= "introduction">
+		<img class = "background" id = "background_introduction" onclick="rotate()" src="images/introduction1.jpg" width = "800" >
+	</div>
+
+
+	<div id = "next_scene">
+		<a href="wake_up.html"><img class = "background" id = "background_next" src="images/introduction3.jpg" width = "800" ></a>
+	</div>
+
+
+		<script type="text/javascript">
+			var counter= 0;
+			var list = ["introduction2","introduction3"];
+
+
+			function rotate(){
+				document.getElementById("background_introduction").src = "images/"+ list[counter]+".jpg";
+
+				if (counter >= list.length){
+				
+					document.getElementById("background_introduction").style.display = "none";
+					document.getElementById("next_scene").style.display = "block";
+	
+					
+				} else {
+					counter= counter+ 1;
+		
+				}
+			}
+
+		</script>
+</body>

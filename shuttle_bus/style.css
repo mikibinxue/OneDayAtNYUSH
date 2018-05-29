@@ -1,0 +1,56 @@
+body{
+	background-color:  #a9d5fb;
+    
+    padding: 15%;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    
+}
+
+img{
+	margin:auto;
+	margin-left: 2%;
+	margin-top:5%;
+    position: fixed;
+}
+
+#arrowDiv{
+	display: none;
+}
+#sky{
+	display: none;
+}
+
+
+.background {
+	z-index: -1;
+}
+
+
+.arrow {
+	margin-top:20px;
+	margin-left: 10px;
+	z-index: 0;
+}
+
+.arrow:hover{
+ width:150px;
+}
+
+
+#arrow_front{
+	left:70%;
+	top:30%;
+
+}
+
+#arrow_middle{
+	left:30%;
+	top:20%;
+
+}
+#arrow_back{
+	left:40%;
+	top:15%;
+
+}

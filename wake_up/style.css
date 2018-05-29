@@ -1,0 +1,59 @@
+body{
+	background-color:  #0611ab;
+    padding: 15%;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    
+}
+
+img{
+	
+	margin:auto;
+	margin-left: 2%;
+	margin-top:5%;
+    position: fixed;
+	
+}
+
+
+#class{
+	display: none;
+}
+
+.background {
+	z-index: -1;
+}
+
+
+.option {
+	z-index: 0;
+	display:none;
+}
+
+.option:hover{
+ transform: rotate(40deg);
+}
+
+
+#early_am{
+	left:24%;
+	top:30%;
+	display: inline-block;
+}
+
+#late_am{
+	left:55%;
+	top:30%;
+	display: inline-block;
+}
+
+#background_early{
+	display: none;
+
+}
+#background_late{
+	display: none;
+
+}
+
+

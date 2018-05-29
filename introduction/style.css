@@ -1,0 +1,19 @@
+body{
+	background-color:  #c5f3a2;
+    
+    padding: 15%;
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+img{
+	margin:auto;
+	margin-left: 2%;
+	margin-top:5%;
+    position: fixed;
+}
+
+
+div#next_scene{
+	display:none;
+}

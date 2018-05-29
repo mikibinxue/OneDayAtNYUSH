@@ -1,0 +1,61 @@
+body{
+	background-color:  #f5d3ef;
+    
+    padding: 15%;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    
+}
+
+img{
+	margin:auto;
+	margin-left: 2%;
+	margin-top:5%;
+    position: fixed;
+}
+
+#finished{
+	display: none;
+	z-index: -1;
+}
+
+
+.background {
+	z-index: -1;
+}
+
+
+.option {
+	z-index: 0;
+	display:none;
+}
+
+.option:hover{
+ transform: rotate(40deg);
+}
+
+#book_choice{
+	left:24%;
+	top:8%;
+}
+
+#cookie_choice{
+	left:52%;
+	top:5%;
+}
+#yogurt_choice{
+	left:40%;
+	top:30%;
+}
+#gym_choice{
+	left:20%;
+	top:55%;
+}
+
+#background_gym{
+	display:none;
+}
+#background_other{
+	display:none;
+}
+

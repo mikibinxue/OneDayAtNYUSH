@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<head>
+	<link rel="stylesheet" type="text/css" href="leisure/style.css">
+	<title>One Day In NYUSH // Leisure Time</title>
+
+</head>
+
+
+<body>
+	<div id= "out_of_class">
+		<img class = "background" id = "background_choices" onclick="choice_page()" src="images/out_of_class_choice.jpg" width = "800" >
+		<img class = "option" id = "book_choice" onclick="choose_other(0)" src="images/book_choice.png" width = "200" >
+		<img class = "option" id = "cookie_choice" onclick="choose_other(1)" src="images/cookie_choice.png" width = "200" >
+		<img class = "option" id = "yogurt_choice" onclick="choose_other(2)" src="images/yogurt_choice.png" width = "150" >
+		<img class = "option" id = "gym_choice" onclick="choose_gym()" src="images/gym_choice.png" width = "300" >
+		<img id="background_other" onclick="choose_other()" src="images/library.jpg" width = "800" >
+		<img id="background_gym" onclick="choose_gym()" src="images/gym1.jpg" width = "800" >
+
+		
+
+
+		<script type="text/javascript">
+			var counter_other = 0;
+			var counter_gym = 0;
+			var other_list = ["library","empty_cookie_jar","last_yogurt"];
+			var gym_list = ["gym1","gym2"];
+
+			
+			function choice_page(){
+
+				document.getElementById("book_choice").style.display = "inline-block";
+				document.getElementById("cookie_choice").style.display = "inline-block";
+				document.getElementById("gym_choice").style.display = "inline-block";
+				document.getElementById("yogurt_choice").style.display = "inline-block";
+				//document.getElementById("background_choices").style.display = "none";
+			}
+
+			
+			function choose_other(choice){
+				var index = choice;
+				console.log(document.getElementById("book_choice").style.display);
+				
+
+				document.getElementById("book_choice").style.display = "none";
+				document.getElementById("cookie_choice").style.display = "none";
+				document.getElementById("gym_choice").style.display = "none";
+				document.getElementById("yogurt_choice").style.display = "none";
+				document.getElementById("background_gym").style.display = "none";
+				document.getElementById("background_choices").style.display = "none";
+				document.getElementById("background_other").style.display = "block";		
+				document.getElementById("background_other").src = "images/"+ other_list[index]+".jpg";
+
+				if (counter_other >=1){
+					document.getElementById("out_of_class").style.display = "none";
+					document.getElementById("finished").style.display = "block";
+
+
+				}else{
+
+				counter_other +=1;
+			}
+
+
+		}
+
+
+
+
+
+	function choose_gym(){
+		document.getElementById("book_choice").style.display = "none";
+		document.getElementById("cookie_choice").style.display = "none";
+		document.getElementById("gym_choice").style.display = "none";
+		document.getElementById("yogurt_choice").style.display = "none";
+		document.getElementById("background_choices").style.display = "none";
+		document.getElementById("background_gym").style.display = "block";
+		document.getElementById("background_gym").src = "images/"+ gym_list[counter_gym]+".jpg";
+
+
+		if (counter_gym >= gym_list.length){
+
+			document.getElementById("out_of_class").style.display = "none";	
+			document.getElementById("finished").style.display = "block";		
+		} else {
+			counter_gym = counter_gym+ 1;
+			
+		}
+	}
+
+
+
+
+</script>
+
+
+</div>
+
+<div id= "finished">
+	<a href="shuttle_bus.html"><img class = "background" id = "background2" src="images/shuttle_back.jpg" width = "800" ></a>
+
+
+</div>
+
+
+</body>

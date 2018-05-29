@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<head>
+	<link rel="stylesheet" type="text/css" href="shuttle_bus/style.css">
+	<title>One Day In NYUSH // Shuttle Bus</title>
+
+</head>
+
+
+<body>
+	<div id= "sequence">
+		<img id ="myComic" class = "background" onclick = "rotate()" src="images/choose_a_seat.jpg" width = "800" ">
+		
+		<br><br>
+
+
+		<script >
+			var comicList = ["choose_a_seat","choose_a_seat2"];
+
+			var counter = 0;
+
+			function rotate(){
+				document.body.style.backgroundColor = "#a9d5fb";
+				document.getElementById("myComic").src = "images/"+comicList[counter]+".jpg";
+
+				if (counter >= comicList.length - 1){
+					document.getElementById("sequence").style.display = "none";
+					document.getElementById("arrowDiv").style.display = "block";
+					counter = 0;
+				} else {
+					counter = counter + 1;
+				}
+
+			}
+
+			
+		</script>
+
+	</div >
+
+	<div id = "arrowDiv">
+	<img id ="myComic" class = "background"  src="images/choose_a_seat2.jpg" width = "800" ">
+
+	<img class = "arrow" id = "arrow_front" onclick="front()" src="images/arrow.png" width = "100" >
+	<img class = "arrow" id = "arrow_middle" onclick="middle()" src="images/arrow.png" width = "100" >
+	<img class = "arrow" id = "arrow_back" onclick="back()" src="images/arrow.png" width = "100" >
+	
+	<script >
+	var counter1 = 0;
+	var counter2 = 0;
+	var counter3 = 0;
+
+
+
+		function front(){
+			console.log("chose front!");
+			console.log(counter1);
+			if (counter1 == 1){
+				console.log("change to sky!");
+				document.getElementById("sequence").style.display = "none";
+				document.getElementById("sky").style.display = "block";
+				document.body.style.backgroundColor = "#efbafb";
+
+			}else{
+				console.log("running sequence");
+			document.getElementById("myComic").src = "images/front.jpg";
+			document.getElementById("sequence").style.display = "block";
+			document.getElementById("arrowDiv").style.display = "none";
+			document.getElementById("myComic").onclick = front;
+			counter1 +=1;
+
+			}
+			
+		}
+
+		function middle(){
+						console.log("chose middle!");
+
+			if (counter2 >=1){
+								console.log("change to sky!");
+				document.getElementById("sequence").style.display = "none";
+				document.getElementById("sky").style.display = "block";
+				console.log("counter: " ,counter1);
+				document.body.style.backgroundColor = "#efbafb";
+
+			}else{
+			document.getElementById("myComic").src = "images/middle.jpg";
+
+			document.getElementById("sequence").style.display = "block";
+			document.getElementById("arrowDiv").style.display = "none";
+						document.getElementById("myComic").onclick = middle;
+
+			counter2 +=1;
+
+			}
+		}
+
+		function back(){
+						console.log("chose back!");
+
+			if (counter3 >=1){
+								console.log("change to sky!");
+				document.getElementById("sequence").style.display = "none";
+				document.getElementById("sky").style.display = "block";
+				document.body.style.backgroundColor = "#efbafb";
+
+			}else{
+			document.getElementById("myComic").src = "images/back.jpg";
+			document.getElementById("sequence").style.display = "block";
+			document.getElementById("arrowDiv").style.display = "none";
+						document.getElementById("myComic").onclick = back;
+
+			counter3 +=1;
+
+			}
+		}
+	</script>
+
+	</div>
+
+	<div id = "sky">
+	   
+	<a href="in_dorm.html"><img src="images/beautiful_sky.jpg" width = "800" "></a>
+	<script type="text/javascript">
+		
+	</script>
+		
+	</div>
+
+
+</body>

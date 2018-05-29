@@ -1,0 +1,52 @@
+body{
+	background-color:  #fff5dc;
+    
+    padding: 15%;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    
+}
+
+img{
+	margin:auto;
+	margin-left: 2%;
+	margin-top:5%;
+    position: fixed;
+}
+
+#leisure_time{
+	display: none;
+}
+
+
+.background {
+	z-index: -1;
+}
+
+
+.option {
+	top:40%;
+	z-index: 0;
+	display:none;
+}
+
+.option:hover{
+ transform: scale(1.5,1.5);
+}
+
+
+#aven{
+	left:30%;
+}
+
+#jiwon{
+	left:60%;
+}
+
+#background_aven{
+	display:none;
+}
+#background_jiwon{
+	display:none;
+}
+

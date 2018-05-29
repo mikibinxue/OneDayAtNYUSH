@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<head>
+	<link rel="stylesheet" type="text/css" href="at_school/style.css">
+	<title>One Day In NYUSH // At School</title>
+
+</head>
+
+
+<body>
+	<div id= "interaction_lab">
+		<img class = "background" id = "background_interaction_lab" onclick="choice_page()" src="images/interaction_lab.jpg" width = "800" >
+		<img class = "option" id = "aven" onclick="choose_fellow_aven()" src="images/aven_option.png" width = "100" >
+		<img class = "option" id = "jiwon" onclick="choose_fellow_jiwon()" src="images/jiwon_option.png" width = "100" >
+		<img id="background_aven" onclick="choose_fellow_aven()" src="images/aven1.jpg" width = "800" >
+		<img id="background_jiwon" onclick="choose_fellow_jiwon()" src="images/jiwon.jpg" width = "800" >
+
+
+		<script type="text/javascript">
+			var comicList = ["mad","choice_background"];
+			var avenList =["aven1","aven2","aven3"];
+
+			var counter = 0;
+			var counter_aven = 0;
+			var counter_jiwon = 0;
+			
+			function choice_page(){
+
+
+				document.getElementById("background_interaction_lab").src = "images/"+comicList[counter]+".jpg";
+				
+				if (counter >= comicList.length-1){
+					document.body.style.backgroundColor = "#ebe833";
+					document.getElementById("aven").style.display = "inline-block";
+					document.getElementById("jiwon").style.display = "inline-block";
+					
+				} else if(counter ==0){
+					document.body.style.backgroundColor = "#53121d";
+					counter = counter + 1;
+				}else {
+					counter = counter + 1;
+				}
+			}
+
+			function choose_fellow_aven(){
+
+
+				document.getElementById("aven").style.display = "none";
+				document.getElementById("jiwon").style.display = "none";
+				document.getElementById("background_interaction_lab").style.display = "none";
+				document.getElementById("background_aven").style.display = "block";
+				document.getElementById("background_aven").src = "images/"+avenList[counter_aven]+".jpg";
+				
+				
+
+				if (counter_aven >= avenList.length){
+
+					document.getElementById("interaction_lab").style.display = "none";
+					document.getElementById("leisure_time").style.display = "block";
+					document.body.style.backgroundColor = "#f5d3ef";
+
+					console.log("end");
+				} else {
+					counter_aven = counter_aven + 1;
+					console.log("counter_aven: ",counter_aven);
+				}
+
+			}
+
+			function choose_fellow_jiwon(){
+				document.body.style.backgroundColor = "#faa9f6";
+				document.getElementById("aven").style.display = "none";
+				document.getElementById("jiwon").style.display = "none";			
+				document.getElementById("background_interaction_lab").style.display = "none";
+				document.getElementById("background_jiwon").style.display = "block";
+				document.getElementById("background_interaction_lab").src = "images/jiwon.jpg";
+				if (counter_jiwon >= 1){
+					document.getElementById("interaction_lab").style.display = "none";
+					document.getElementById("leisure_time").style.display = "block";
+					document.body.style.backgroundColor = "#f5d3ef";					
+				} else {
+					counter_jiwon = counter_jiwon + 1;
+				}
+
+			}
+
+
+		</script>
+
+
+	</div>
+
+	<div id= "leisure_time">
+		
+		<a href="leisure.html"><img class = "background" id = "background2" src="images/out_of_class.jpg" width = "800" ></a>
+		
+
+
+	</div>
+
+
+</body>
